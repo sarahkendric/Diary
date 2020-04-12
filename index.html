@@ -3,7 +3,7 @@
 <html>
 
   <head>
-    <title>Diary</title>
+    <title>My Diary</title>
     <meta charset="UTF-8">
     <link rel="shortcut icon" type="image/png" href="favicon.png">
 
@@ -11,12 +11,81 @@
 
     body {
       margin: 0;
-      cursor: url("https://cdn.pixabay.com/photo/2017/03/09/10/57/key-2129313_960_720.png"), auto;
+      cursor: url("cursor.png"), auto;
     }
 
-    #wrapper {display: none;}
     #backgroundimages {display: none;}
+    .background {display: none;}
+    #drawings {display: none;}
 
+    .background1 img {
+    background-size: 400%;
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite; 
+    animation-duration: 15s;
+    animation-direction: alternate; /* not strictly necessary */
+    position:fixed;
+    z-index: -9;
+    }
+
+    .background1 img:nth-of-type(1) {
+        animation-delay: 14s;
+    }
+    
+    .background1 img:nth-of-type(2) {
+        animation-delay: 9s;
+    }
+
+    .background1 img:nth-of-type(3) {
+        /* add some delay for the first picture as well */
+        animation-delay: 3s;
+    }
+
+    @keyframes cf3FadeInOut {
+        /* distributing times evenly */
+        0% {
+            opacity: 1;
+        }
+        25% {
+            opacity: 0;
+        }
+        75% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    #window1 {
+      z-index: auto;
+      overflow: scroll;
+      width: 72vw;
+      height: 80vh;
+      background-color: #f0c5de;
+      border: 2px solid black;
+      border-top: 30px solid black;
+      box-shadow: 10px 10px 20px #333333;
+     }
+
+     ::-webkit-scrollbar {
+        width: 10px;
+      }
+     ::-webkit-scrollbar-thumb {
+       background: black; 
+     }
+     
+
+     #wrapper {
+      margin-left: 13.5vw;
+      padding-top: 7vh;
+     }
+
+      #images1 {
+      padding-left: 5vw;
+      padding-top: 3vh;
+      }
 
 @media screen and (min-width: 1100px) {
 
@@ -95,7 +164,7 @@
      }
 
      #images1 {
-      padding-left: 45px;
+      padding-left: 42px;
       padding-top: 20px;
      }
 
@@ -130,6 +199,10 @@
 
      #wrapper {display: block;}
      #backgroundimages {display: block;}
+     .background1 {display: none;}
+     .background {display: block;}
+     #drawings {display: block;}
+  
   }
 
      
@@ -144,6 +217,13 @@
      <img class="top" src="com.jpg" width="100%">
      <img class="bottom" src="grad.jpg" width="100%">
     </div>
+
+    <div class="background1">
+     <img class="bottom" src="costume.jpg" width="260%">
+     <img class="top" src="com.jpg" width="260%">
+     <img class="bottom" src="grad.jpg" width="260%">
+    </div>
+
     
     <div id="drawings">
       <img src="drawings.png" width="100%">
@@ -153,23 +233,23 @@
   <div id="wrapper">
     <div id="window1">
       <div id="images1">
-        <img src="1.jpg" width="450px"><br>
-        <img src="2.jpg" width="450px"><br>
-        <img src="3.jpg" width="450px"><br>
-        <img src="4.jpg" width="450px"><br>
-        <img src="5.jpg" width="450px"><br>
-        <img src="6.jpg" width="450px"><br>
-        <img src="7.jpg" width="450px"><br>
-        <img src="8.jpg" width="450px"><br>
-        <img src="9.jpg" width="450px"><br>
-        <img src="10.jpg" width="450px"><br>
-        <img src="11.jpg" width="450px"><br>
-        <img src="12.jpg" width="450px"><br>
-        <img src="13.jpg" width="450px"><br>
-        <img src="19.jpg" width="450px"><br>
-        <img src="17.jpg" width="450px"><br>
-        <img src="16.jpg" width="450px"><br>
-        <img src="18.jpg" width="450px"><br>
+        <img src="1.jpg" width="93%"><br>
+        <img src="2.jpg" width="93%"><br>
+        <img src="3.jpg" width="93%"><br>
+        <img src="4.jpg" width="93%"><br>
+        <img src="5.jpg" width="93%"><br>
+        <img src="6.jpg" width="93%"><br>
+        <img src="7.jpg" width="93%"><br>
+        <img src="8.jpg" width="93%"><br>
+        <img src="9.jpg" width="93%"><br>
+        <img src="10.jpg" width="93%"><br>
+        <img src="11.jpg" width="93%"><br>
+        <img src="12.jpg" width="93%"><br>
+        <img src="13.jpg" width="93%"><br>
+        <img src="19.jpg" width="93%"><br>
+        <img src="17.jpg" width="93%"><br>
+        <img src="16.jpg" width="93%"><br>
+        <img src="18.jpg" width="93%"><br>
         <br>
       </div>
     </div>
